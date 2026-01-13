@@ -31,23 +31,24 @@ const Microsoft365Dashboard = () => {
       setError(null);
 
       // Check authentication status
-      const authResponse = await fetch('http://localhost:3000/auth/status');
+      const authResponse = await fetch('/api/microsoft/me');
       const authData = await authResponse.json();
-      setMetrics(prev => ({ ...prev, authStatus: authData }));
-
-      if (!authData.authenticated) {
+      if (authResponse.ok) {
+        setMetrics(prev => ({ ...prev, authStatus: { authenticated: true, account: authData } }));
+      } else {
+        setMetrics(prev => ({ ...prev, authStatus: { authenticated: false, account: null } }));
         setError("Please authenticate with Microsoft 365 first");
         return;
       }
 
       // Fetch metrics
       const [meetingsRes, emailRes, chatsRes] = await Promise.all([
-        fetch('http://localhost:3000/api/metrics/meetings').catch(() => null),
-        fetch('http://localhost:3000/api/metrics/email').catch(() => null),
-        fetch('http://localhost:3000/api/metrics/chat').catch(() => null),
+        fetch('/api/microsoft/meetings').catch(() => null),
+        fetch('/api/microsoft/email').catch(() => null),
+        fetch('/api/microsoft/chat').catch(() => null),
       ]);
 
-      const meetings = meetingsRes ? await meetingsRes.json() : null;
+      const meetings = meetingsRes && meetingsRes.ok ? await meetingsRes.json() : null;
       const email = emailRes ? await emailRes.json() : null;
       const chats = chatsRes ? await chatsRes.json() : null;
 
@@ -67,7 +68,7 @@ const Microsoft365Dashboard = () => {
   };
 
   const handleAuthenticate = () => {
-    window.open('http://localhost:3000/auth/login', '_blank');
+    window.open('/auth/login', '_blank');
   };
 
   const handleRefresh = () => {

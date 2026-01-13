@@ -49,10 +49,64 @@ const Demo = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground w-full overflow-x-auto lg:w-auto lg:justify-center">
             <TabsTrigger value="overview" className="whitespace-nowrap">Overview</TabsTrigger>
+            <TabsTrigger value="services" className="whitespace-nowrap">Services</TabsTrigger>
             <TabsTrigger value="timesaved" className="whitespace-nowrap">Time Saved</TabsTrigger>
             <TabsTrigger value="redeployment" className="whitespace-nowrap">Redeployment</TabsTrigger>
             <TabsTrigger value="roi" className="whitespace-nowrap">ROI Impact</TabsTrigger>
           </TabsList>
+
+          <TabsContent value="services" className="space-y-6">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                    <span className="text-blue-600 font-bold">J</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Jira Integration</h3>
+                    <p className="text-sm text-muted-foreground">Project management & issue tracking</p>
+                  </div>
+                </div>
+                <Button className="w-full" onClick={() => window.open('/projects/jira-dashboard', '_blank')}>
+                  View Jira Dashboard
+                </Button>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-lg bg-orange-100 flex items-center justify-center">
+                    <span className="text-orange-600 font-bold">A</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Asana Integration</h3>
+                    <p className="text-sm text-muted-foreground">Task management & workflows</p>
+                  </div>
+                </div>
+                <Button className="w-full" onClick={() => window.open('/projects/asana-dashboard', '_blank')}>
+                  View Asana Dashboard
+                </Button>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-lg bg-green-100 flex items-center justify-center">
+                    <span className="text-green-600 font-bold">M</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Microsoft 365</h3>
+                    <p className="text-sm text-muted-foreground">Calendar, email & meetings</p>
+                  </div>
+                </div>
+                <Button className="w-full" onClick={() => window.open('/auth/login', '_blank')}>
+                  Authenticate & View
+                </Button>
+              </Card>
+            </div>
+
+            <div className="mt-8">
+              <Microsoft365Dashboard />
+            </div>
+          </TabsContent>
 
           <TabsContent value="overview" className="space-y-6">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

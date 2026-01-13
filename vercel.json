@@ -1,13 +1,26 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.ts": {
-      "memory": 1024,
-      "maxDuration": 30
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "server.ts",
+      "use": "@vercel/node"
     }
-  },
+  ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.ts" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/microsoft/(.*)",
+      "destination": "/server.ts"
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "/server.ts"
+    }
   ]
 }

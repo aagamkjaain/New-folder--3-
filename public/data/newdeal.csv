@@ -1,0 +1,6 @@
+External Deal ID,Deal Name,Pipeline,Deal Stage,Amount,Create Date,Close Date,Associated Company Domain,Associated Contact Email
+DEAL_EXT_101,Acme CRM Expansion,default,appointmentscheduled,4500000,2025-01-05,2025-02-05,acme.com,raj@acme.com
+DEAL_EXT_102,Beta AI Rollout,default,appointmentscheduled,3200000,2025-01-06,2025-02-10,betatech.com,alex@betatech.com
+DEAL_EXT_103,Delta Sales Automation,default,appointmentscheduled,2800000,2025-01-07,2025-02-18,delta.io,priya@delta.io
+DEAL_EXT_104,Orion Marketing Platform,default,appointmentscheduled,3900000,2025-01-08,2025-02-12,orion.com,neha@orion.com
+DEAL_EXT_105,Zenith Data Stack,default,appointmentscheduled,5100000,2025-01-09,2025-02-20,zenith.ai,rohan@zenith.ai

@@ -1,0 +1,11 @@
+External Ticket ID,Ticket Name,Pipeline,Ticket Status,Priority,Create Date,Close Date,Associated Company Domain,Associated Contact Email
+TICKET_EXT_201,Login issue – Acme,default,new,High,2025-01-05,2025-01-06,acme.com,raj@acme.com
+TICKET_EXT_202,API timeout errors – Beta,default,new,Medium,2025-01-06,2025-01-07,betatech.com,alex@betatech.com
+TICKET_EXT_203,Data sync failure – Delta,default,new,High,2025-01-07,2025-01-09,delta.io,priya@delta.io
+TICKET_EXT_204,Dashboard not loading – Orion,default,new,Low,2025-01-08,2025-01-10,orion.com,neha@orion.com
+TICKET_EXT_205,Billing mismatch – Zenith,default,new,High,2025-01-09,2025-01-11,zenith.ai,rohan@zenith.ai
+TICKET_EXT_206,SSO setup help – Apollo,default,new,Medium,2025-01-10,2025-01-11,apollo.io,ankit@apollo.io
+TICKET_EXT_207,Email notifications broken – Nova,default,new,Medium,2025-01-11,2025-01-13,nova.com,sara@nova.com
+TICKET_EXT_208,Report export slow – Pulse,default,new,Low,2025-01-12,2025-01-15,pulse.io,deepak@pulse.io
+TICKET_EXT_209,CRM field missing – Atlas,default,new,Medium,2025-01-13,2025-01-14,atlas.com,meera@atlas.com
+TICKET_EXT_210,Account access revoked – Falcon,default,new,High,2025-01-14,2025-01-16,falcon.io,arjun@falcon.io
