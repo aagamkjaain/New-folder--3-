@@ -8,6 +8,7 @@ import { TimeTracking } from "@/components/demo/TimeTracking";
 import { RedeploymentView } from "@/components/demo/RedeploymentView";
 import { ROIMetrics } from "@/components/demo/ROIMetrics";
 import { LiveFeed } from "@/components/demo/LiveFeed";
+import Microsoft365Dashboard from "@/components/demo/Microsoft365Dashboard";
 
 const Demo = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -46,11 +47,11 @@ const Demo = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 lg:w-[600px]">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="timesaved">Time Saved</TabsTrigger>
-            <TabsTrigger value="redeployment">Redeployment</TabsTrigger>
-            <TabsTrigger value="roi">ROI Impact</TabsTrigger>
+          <TabsList className="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground w-full overflow-x-auto lg:w-auto lg:justify-center">
+            <TabsTrigger value="overview" className="whitespace-nowrap">Overview</TabsTrigger>
+            <TabsTrigger value="timesaved" className="whitespace-nowrap">Time Saved</TabsTrigger>
+            <TabsTrigger value="redeployment" className="whitespace-nowrap">Redeployment</TabsTrigger>
+            <TabsTrigger value="roi" className="whitespace-nowrap">ROI Impact</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
@@ -84,6 +85,11 @@ const Demo = () => {
               <div>
                 <LiveFeed />
               </div>
+            </div>
+
+            {/* Microsoft 365 Integration Section */}
+            <div className="mt-8">
+              <Microsoft365Dashboard />
             </div>
           </TabsContent>
 

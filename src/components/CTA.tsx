@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const CTA = () => {
   return (
@@ -16,10 +17,12 @@ export const CTA = () => {
               See how Velocity AI helps leading enterprises measure, optimize, and prove the ROI of their AI investments.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button size="lg" variant="secondary" className="group gap-2 shadow-lg">
-                Schedule a Demo
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
+              <Link to="/demo">
+                <Button size="lg" variant="secondary" className="group gap-2 shadow-lg">
+                  Try Demo
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
               <Button 
                 size="lg" 
                 variant="outline" 
