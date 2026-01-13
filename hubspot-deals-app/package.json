@@ -1,0 +1,15 @@
+{
+  "name": "hubspot-deals-app",
+  "version": "1.0.0",
+  "description": "Minimal web app to fetch HubSpot Deals and Email activities",
+  "main": "server.js",
+  "scripts": {
+    "build-client": "cd client && npm install && npm run build",
+    "start": "node server.js",
+    "serve": "npm run build-client && node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}

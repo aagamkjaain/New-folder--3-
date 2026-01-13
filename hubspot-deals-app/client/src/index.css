@@ -1,0 +1,10 @@
+:root{--bg:#f7fbfd;--muted:#7c98b6;--accent:#ff7a59}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#33475b}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#fff;border-bottom:1px solid #eef3f6}
+.brand{font-weight:700}
+.actions button{margin-left:8px;padding:8px 12px;border-radius:6px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.actions button.active{color:var(--accent);border-bottom:3px solid var(--accent)}
+.container{padding:24px}
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;color:var(--muted)}
+.deal-card{background:white;padding:12px;border-radius:8px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
